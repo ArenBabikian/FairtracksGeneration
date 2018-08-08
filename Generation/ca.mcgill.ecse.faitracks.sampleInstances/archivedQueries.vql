@@ -1,0 +1,81 @@
+package ca.mcgill.ecse.fairtracks.queries
+
+import "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+//@Constraint(targetEditorId = "org.eclipse.emf.ecore.presentation.ReflectiveEditorID" /*"ca.mcgill.ecse.fairtracks.FairtracksDsl"*/,
+//            severity = "error",
+//            message = "duplicate role",
+//            key = {player1, player2})
+//pattern duplicatePlayerLengthX(player1 : FTPlayer, player2 : FTPlayer, commonName : EInt) {
+//	FTPlayer.lengthX(player1, commonName);
+//	FTPlayer.lengthX(player2, commonName);
+//	player1 != player2;
+//}
+
+//@Constraint(targetEditorId = "org.eclipse.emf.ecore.presentation.ReflectiveEditorID" /*"ca.mcgill.ecse.fairtracks.FairtracksDsl"*/,
+//            severity = "error",
+//            message = "duplicate role",
+//            key = {player1})
+//pattern attacker(player1 : FTPlayer) {
+//	FTPlayer.role(player1, FTRole);
+//}
+
+
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+//            severity = "error",
+//            message = "player without position",
+//            key = {p1})
+//pattern countPlayersLower(p1 : FTPlayer){
+//
+//}
+//		find playerFinder(p1);
+		// find countPlayersHelper(p1, p2);
+//	or {
+//		neg find playerFinder(p2);
+//		neg find playerFinder(p1);
+//	} 
+
+//
+//private pattern player(f1 : Fairtracksmodel, pl : FTPlayer){
+//	Fairtracksmodel.staticObjects(f1, p1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+//            severity = "error",
+//            message = "player without position",
+//            key = {f1})
+//pattern countPlayers(f1 : Fairtracksmodel){
+//	2 == count find player(_);
+//}
+
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+//            severity = "error",
+//            message = "player without position",
+//            key = {p1})
+//pattern counter(p1 : FTPlayer){
+//	neg find countPlayers(p1);
+//}
+
+
+////No.14 from checklist
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+//            severity = "error",
+//            message = "Circular Zone containment",
+//            key = {z1, z2})
+//pattern circularZoneContainment(z1 : FTZone, z2 : FTZone){
+//	find contains(z2,z1);
+//	find contains+(z1,z2);
+//	z1 != z2;
+//}
+//
+////No.15 from checklist
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+//            severity = "error",
+//            message = "Self containment",
+//            key = {z1, z2})
+//pattern noSelfContain(z1 : FTZone, z2 : FTZone){
+//	FTZone.contains(z1, z2);
+//	z1 == z2;
+//}

@@ -1,0 +1,90 @@
+Player = {
+	name: p1;
+	role: attack; 
+	startPosition: X1; 
+	ballColor: Red ;
+	canPickUp;
+	trajectory : t1
+}
+
+Player = {
+	name: p2;
+	role : defense ;
+	startPosition : X2;
+	canPickUp;
+	trajectory : t2
+}
+
+Zone = {
+	name: z1;
+	zoneType: green;
+	LL: (10, 230);
+	UR: (23, 18);
+	allowedPlayers: p1, p2;
+}
+
+Zone = {
+	name: z2;
+	zoneType: green;
+	LL: (10, 230);
+	UR: (23, 18);
+	contains: z1;
+	isContainedBy: z3;
+	allowedPlayers: p1, p2;
+}
+
+Zone = {
+	name: z3;
+	zoneType: green;
+	LL: (10, 230);
+	UR: (23, 18);
+	allowedPlayers: p1, p2;
+}
+
+Block = {
+	name: b1;
+	isMoveable;
+	LL: (23,90);
+	UR: (212,2443);
+	allowedZones : z1;
+}
+
+Block = {
+	name: b2;
+	LL: (23,90);
+	UR: (212,2443);
+	allowedZones : z1;
+}
+
+Trajectory = {
+	name : t1;
+	points : p1;
+}
+
+Trajectory = {
+	name : t2;
+	points : p2, p1;
+}
+
+Point = {
+	ID : p1;
+	trajectory : t1, t1
+	position : (1, 2) ;
+	currentZone : z1;
+	blockPickedUp;
+	ballPickedUp;
+	onZipline;
+	reachedGoal
+	nextPoint : p2
+}
+
+Point = {
+	ID : p2;
+	trajectory : t1, t1
+	position : (1, 2) ;
+	currentZone : z1;
+	blockPickedUp;
+	ballPickedUp;
+	onZipline;
+	reachedGoal
+}

@@ -1,0 +1,993 @@
+package ca.mcgill.ecse.fairtracks.queries
+
+import "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+//TODO: fix parameters
+//TODO fix keys
+//TODO: when working wwith enums, also consider case where there is no value chosen
+//TODO: make sample valid instance (1-2)
+
+/****************************/
+//"InstanceCount" Constraints
+/****************************/
+
+//1. Root Class
+/****************************/
+
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Root element count", key = {o1})
+//pattern countFairtracksModel(o1 : Fairtracksmodel, o2 : Fairtracksmodel){
+//	Fairtracksmodel(o1);
+//	Fairtracksmodel(o2);
+//	o1 != o2;
+//}
+
+//2. Static Classes
+/****************************/
+
+private pattern helperFTPlayer(o1 : FTPlayer){
+	FTPlayer(o1);
+}
+
+private pattern helperFTZone(o1 : FTZone){
+	FTZone(o1);
+}
+
+private pattern helperFTObstacle(o1 : FTObstacle){
+	FTObstacle(o1);
+}
+
+private pattern helperFTZipline(o1 : FTZipline){
+	FTZipline(o1);
+}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Making Static Objects Abstract", key = {o1})
+pattern countStaticObject(o1 : FTStaticObject){
+	FTStaticObject(o1);
+	neg find helperFTPlayer(o1);
+	neg find helperFTZone(o1);
+	neg find helperFTObstacle(o1);
+	neg find helperFTZipline(o1);
+}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "RealCoordintes counter", key = {r1})
+pattern countRealCoordinates(r1 : FTRealCoordinates){
+	FTRealCoordinates(r1);
+}
+
+//This is not necessary 
+//It is specified in Constraint #2
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Position count", key = {o1})
+//pattern countPosition(o1 : FTPosition){
+//	FTPosition(o1);
+//}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Making Object With Distance Abstract", key = {o1})
+pattern countObjectWithDistance(o1 : FTObjectWithDistance){
+	FTObjectWithDistance(o1);
+	neg find helperFTPlayer(o1);
+	neg find helperFTZone(o1);
+	neg find helperFTObstacle(o1);
+}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player count", key = {o1})
+pattern countPlayer(o1 : FTPlayer, o2 : FTPlayer/*, o3 : FTPlayer, o4 : FTPlayer */){
+	FTPlayer(o1);
+	FTPlayer(o2);
+//	FTPlayer(o3);
+//	FTPlayer(o4);
+	o1 != o2;
+//	o1 != o3;
+//	o2 != o3;
+//	o1 != o4;
+//	o2 != o4;
+//	o3 != o4;
+}
+
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "PickUpColorClass count", key = {o1})
+//pattern countPickUpColorClass(o1 : FTPickUpColorClass){
+//	FTPickUpColorClass(o1);
+//}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Zone count", key = {o1})
+pattern countZone(o1 : FTZone
+//	, o2 : FTZone, o3 : FTZone, o4 : FTZone, o5 : FTZone
+){
+	FTZone(o1);
+//	FTZone(o2);
+//	FTZone(o3);
+//	FTZone(o4);
+//	FTZone(o5);
+//	o1 != o2;
+//	o1 != o3;
+//	o2 != o3;
+//	o1 != o4;
+//	o2 != o4;
+//	o3 != o4;
+//	o1 != o5;
+//	o2 != o5;
+//	o3 != o5;
+//	o4 != o5; 
+}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Obstacle count", key = {o1})
+pattern countObstacle(o1 : FTObstacle
+//	, o2 : FTObstacle, o3 : FTObstacle
+){
+	FTObstacle(o1);
+	FTObstacle(o2);
+//	FTObstacle(o3);
+//	FTObstacle(o4);
+//	FTObstacle(o5);
+	o1 != o2;
+//	o1 != o3;
+//	o2 != o3;
+//	o1 != o4;
+//	o2 != o4;
+//	o3 != o4;
+//	o1 != o5;
+//	o2 != o5;
+//	o3 != o5;
+//	o4 != o5;
+}
+
+@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Zipline count", key = {o1})
+pattern countZipline(o1 : FTZipline){
+	FTZipline(o1);
+//	FTZipline(o2);
+//	o1 != o2;
+}
+
+
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Distance count", key = {o1})
+//pattern countDistance(o1 : FTDistance){
+//	FTDistance(o1);
+//}
+
+
+//3. Dynamic Classes
+/****************************/
+
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Trajectory count", key = {o1})
+//pattern countTrajectory(o1 : FTTrajectory){
+//	FTTrajectory(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "State count", key = {o1})
+//pattern countState(o1 : FTState){
+//	FTState(o1);
+//}
+//
+//
+//private pattern helperFTDistanceObs(o1 : FTDistanceObs){
+//	FTDistanceObs(o1);
+//}
+//
+//private pattern helperFTZoneObs(o1 : FTZoneObs){
+//	FTZoneObs(o1);
+//}
+//
+//private pattern helperFTPickupObs(o1 : FTPickUpObs){
+//	FTPickUpObs(o1);
+//}
+//
+//private pattern helperFTHangingObs(o1 : FTHangingObs){
+//	FTHangingObs(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Making Observations Abstract", key = {o1})
+//pattern countObservation(o1 : FTObservation){
+//	FTObservation(o1);
+//	neg find helperFTDistanceObs(o1);
+//	neg find helperFTZoneObs(o1);
+//	neg find helperFTPickupObs(o1);
+//	neg find helperFTHangingObs(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "DistanceObs count", key = {o1})
+//pattern countDistanceObs(o1 : FTDistanceObs){
+//	FTDistanceObs(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "ZoneObs count", key = {o1})
+//pattern countZoneObs(o1 : FTZoneObs){
+//	FTZoneObs(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "PickUpObs count", key = {o1})
+//pattern countPickUpObs(o1 : FTPickUpObs){
+//	FTPickUpObs(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "HangingObs count", key = {o1})
+//pattern countHangingsObs(o1 : FTHangingObs){
+//	FTHangingObs(o1);
+//}
+
+
+/****************************/
+//StaticObject Constraints
+/****************************/
+
+/****************************/
+//Player Constraints
+/****************************/
+
+//#1
+//keys are for symetry. will not give 2 errors for this
+@Constraint(
+	targetEditorId = "ca.mcgill.ecse.FairtracksDsl", 
+	severity = "error", 
+	message = "Players have duplicate role", 
+	key = {p1, p2}
+)
+pattern PlayerDistinctRole(	
+	p1 : FTPlayer, 	p2 : FTPlayer, commonRole : FTRole
+) {
+	FTPlayer.role(p1, commonRole);
+	FTPlayer.role(p2, commonRole);
+	p1 != p2;
+}
+
+////#1.1
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player does not exactly have one role", key = {p1})
+//pattern PlayerRoleExistance(p1 : FTPlayer) {
+//	neg find helperFindPlayerRole(p1);
+//}
+//
+//private pattern helperFindPlayerRole(p1 : FTPlayer){
+//	FTPlayer.role(p1, _);
+//}
+//
+////#2
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Players cannot start in same zone",key = {p1, p2, commonZone})
+//pattern PlayerNoTwoInSameZone(p1 : FTPlayer, p2 : FTPlayer, commonZone : FTZone){
+//	FTPlayer.initiallyInside(p1, commonZone);
+//	FTPlayer.initiallyInside(p2, commonZone);
+//	p1 != p2;
+//}
+//
+////#3
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "canPickUp is true but there are no pickable objects",key = {p1})
+//pattern PlayerCanPickUpAndObstacleCorrespondance(p1 : FTPlayer){
+//	FTPlayer.canPickUpObject(p1, true);
+//	FTObstacle.isMoveable(_, false);
+//}
+//
+////#4
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No pickable Obstacle of valid color",key = {p1})
+//pattern PlayerNoValidPickupColor(p1: FTPlayer){
+//	FTPlayer.canPickUpObject(p1, true);
+//	neg find helperPlayerByColor(p1);
+//}
+//
+//private pattern helperPlayerByColor(p1 : FTPlayer){
+////	FTPlayer.pickUpColor.color(p1,::White);
+////} or {
+//	FTPlayer.pickUpColor.color(p1,::Red);
+//} or {
+//	FTPlayer.pickUpColor.color(p1,::Blue);
+//} or {
+//	FTPlayer.pickUpColor.color(p1,::Yellow);
+//}
+//
+////#5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Player cannot pick up objects of color ::Other",key = {p1, c1})
+//pattern PlayerOtherPickupColor(p1: FTPlayer, c1 : FTPickUpColorClass){
+//	FTPickUpColorClass.color(c1, ::Other);
+//	FTPlayer.pickUpColor(p1, c1);
+//}
+//
+////#6
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Player is not point-sized",key = {p1})
+//pattern PlayerSize(p1: FTPlayer){
+//	FTPlayer.size(p1,::Small);
+//} or {
+//	FTPlayer.size(p1,::Medium);
+//} or {
+//	FTPlayer.size(p1,::Big);
+//}
+//
+///****************************/
+////Zone Constraints
+///****************************/
+//
+////#7
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Player not allowed in initial zone",key = {p1, z1})
+//pattern ZonePlayerInitiallyNotAllowed(p1: FTPlayer, z1 : FTZone){
+//	FTPlayer.initiallyInside(p1, z1);
+//	FTZone.disallowedPlayers(z1, p1);
+//}
+//
+////#8
+////TODO
+//
+////#8.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "For a contained zone, must have all the same disallowed players as contained zone",key = {p1, z1})
+//pattern ZoneContaimentPlayerAllowanceLimits(p1: FTPlayer, z1 : FTZone, z2 : FTZone){
+//	FTZone.contains(z1, z2);
+//	FTZone.disallowedPlayers(z1, p1);
+//	neg find helperDisallowedPlayerFinder(z2, p1);
+//}
+//
+//private pattern helperDisallowedPlayerFinder(z1 : FTZone, p1 : FTPlayer){
+//	FTZone.disallowedPlayers(z1, p1);
+//}
+//
+////#9
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Adjacency is not commutative",key = {o1, o2})
+//pattern ZoneAdjacencyCommutativity (o1 : FTZone, o2 : FTZone){
+//	FTZone.isAdjacentTo(o1, o2);
+//	neg find helperAdjacencyFinder(o2, o1);
+//}
+//
+//private pattern helperAdjacencyFinder (o1 : FTZone, o2 : FTZone){
+//	FTZone.isAdjacentTo(o1, o2);
+//}
+//
+////#10
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No self-adjacency",key = {o1})
+//pattern ZoneSelfAdjacency (o1 : FTZone){
+//	FTZone.isAdjacentTo(o1, o1);
+//}
+//
+////#11
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Partial overlap is not commutative",key = {o1, o2})
+//pattern ZonePartialOverlapCommutativity (o1 : FTZone, o2 : FTZone){
+//	FTZone.partiallyOverlaps(o1, o2);
+//	neg find helperOverlapFinder(o2, o1);
+//}
+//
+//private pattern helperOverlapFinder (o1 : FTZone, o2 : FTZone){
+//	FTZone.partiallyOverlaps(o1, o2);
+//}
+//
+////#12
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No self-overlap",key = {o1})
+//pattern ZoneSelfOverlap (o1 : FTZone){
+//	FTZone.partiallyOverlaps(o1, o1);
+//}
+//
+////#13
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No self-containment",key = {o1})
+//pattern ZoneSelfContainment (o1 : FTZone){
+//	FTZone.contains(o1, o1);
+//}
+//
+////#14
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Big zones cannot contain big zones",key = {o1, o2})
+//pattern ZoneBigContainmentLimits (o1 : FTZone, o2 : FTZone){
+//	FTZone.size(o1, ::Big);
+//	FTZone.contains(o1, o2);
+//	FTZone.size(o2, ::Big);
+//}
+//
+////#15
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Medium zones can only contain point-  or small-sized zones",key = {o1, o2})
+//pattern ZoneMediumContainmentLimits (o1 : FTZone, o2 : FTZone){
+//	FTZone.size(o1, ::Medium);
+//	FTZone.contains(o1, o2);
+//	find helperMediumPlusZoneFinder(o2);
+//}
+//
+//private pattern helperMediumPlusZoneFinder (o1 : FTZone){
+//	FTZone.size(o1, ::Medium);
+//} or {
+//	FTZone.size(o1, ::Big);
+//}
+//
+////#16
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Small zones can only contain point-sized zones",key = {o1, o2})
+//pattern ZoneSmallContainmentLimits (o1 : FTZone, o2 : FTZone){
+//	FTZone.size(o1, ::Small);
+//	FTZone.contains(o1, o2);
+//	neg find helperPointZoneFinder(o2);
+//}
+//
+//private pattern helperPointZoneFinder (o1 : FTZone){
+//	FTZone.size(o1, ::Point);
+//}
+//
+////#17
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Point zones cannot contain any other zones",key = {o1})
+//pattern ZonePointContainmentLimits(o1 : FTZone) {
+//	FTZone.size(o1, ::Point);
+//	FTZone.contains(o1, _);
+//}
+//
+////#18
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Point zone must be contained by another zone", key = {o1})
+//pattern ZoneZipineUpperContaiment(o1 : FTZone) {
+//	FTZone.size(o1, ::Point);
+//	neg find helperZiplineContainer(o1);
+//}
+//
+//private pattern helperZiplineContainer(o1 : FTZone){
+//	FTZone.contains(_, o1);
+//}
+//
+////#18.5
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "For a contained zone, must have all the same contained zones as contained zone",key = {z1, z2})
+//pattern ZoneContainmentZoneContainmentLimits(z1 : FTZone, z2 : FTZone) {
+//	FTZone.contains(z1, z2);
+//	find helperContainsZoneFinder(z2, z3);
+//	neg find helperContainsZoneFinder(z1, z3);
+//}
+//
+//private pattern helperContainsZoneFinder(z1 : FTZone, z2 : FTZone){
+//	FTZone.contains(z1, z2);
+//}
+//
+////18.75
+////TODO
+//
+////#19
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Point zones cannot be adjacent to any other zones", key = {o1})
+//pattern ZonePointAdjacencyLimits(o1 : FTZone) {
+//	FTZone.size(o1, ::Point);
+//	FTZone.isAdjacentTo(o1, _);
+//}
+//
+////#20
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Point zones cannot partially overlap any other zones", key = {o1})
+//pattern ZonePointPartialOverlapLimits(o1 : FTZone) {
+//	FTZone.size(o1, ::Point);
+//	FTZone.partiallyOverlaps(o1, _);
+//}
+//
+////#21
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline Zone must be point-sized",key = {o1})
+//pattern ZoneZiplineSize (o1 : FTZone){
+//	FTZone.type(o1, ::Zipline);
+//	neg find helperPointZoneFinder(o1);
+//}
+//
+////#22
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Only the zipline zone can be point-sized",key = {o1})
+//pattern ZonePointSizedType (o1 : FTZone){
+//	FTZone.size(o1, ::Point);
+//	neg find helperZiplineZoneFinder(o1);
+//}
+//
+//private pattern helperZiplineZoneFinder (o1 : FTZone){
+//	FTZone.type(o1, ::Zipline);
+//}
+//
+///****************************/
+////Obstacles Constraints
+///****************************/
+//
+////#23
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Non-movable block must have color Other", key = {ob1})
+//pattern ObstacleNonMovableOtherColor(ob1 : FTObstacle){
+//	FTObstacle.isMoveable(ob1, false);
+//	neg find helperObstacleColoredOtherFinder(ob1);
+//}
+//
+//private pattern helperObstacleColoredOtherFinder(ob1 : FTObstacle) {
+//	FTObstacle.color(ob1, ::Other);
+//}
+//
+////#24
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Movable object cannot be colored Other", key = {ob1})
+//pattern ObstacleMovableNotColoredOther(ob1 : FTObstacle){
+//	FTObstacle.isMoveable(ob1, true);
+//	FTObstacle.color(ob1, ::Other);
+//}
+//
+////#24.1
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player has no value for canPickUp", key = {o1})
+//pattern ObstacleNoColor(o1 : FTPlayer) {
+//	neg find helperColorValFinder(o1);
+//}
+//
+//private pattern helperColorValFinder(o1 : FTPlayer){
+//	FTPlayer.canPickUpObject(o1, _);
+//}
+//
+////#25
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Obstacle not allowed in initial zone",key = {ob1, z1})
+//pattern ObstacleInitalZoneNotAllowed(ob1: FTObstacle, z1 : FTZone){
+//	FTObstacle.disallowedZones(ob1, z1);
+//	FTObstacle.initiallyInside(ob1, z1);
+//}
+//
+////#26
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Obstacle size cannot be a point",key = {ob1})
+//pattern ObstaclePointSizeLimits(ob1: FTObstacle){
+//	FTObstacle.size(ob1, ::Point);
+//}
+//
+////#27
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Small obstacles must be movable",key = {ob1})
+//pattern ObstacleSmallSizeLimits(ob1: FTObstacle){
+//	FTObstacle.size(ob1, ::Small);
+//	FTObstacle.isMoveable(ob1, false);
+//}
+//
+////#28
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Big obstacles must be non-movable",key = {ob1})
+//pattern ObstacleBigSizeLimits(ob1: FTObstacle){
+//	FTObstacle.size(ob1, ::Big);
+//	FTObstacle.isMoveable(ob1, true);
+//}
+//
+////#29
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Obstacle cannot be in point-sized zones",key = {ob1, z1})
+//pattern ObstacleInPointZone(ob1: FTObstacle, z1 : FTZone){
+//	FTZone.size(z1, ::Point);
+//	FTObstacle.initiallyInside(ob1, z1);
+//}
+//
+////#30
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Big obstacle cannot be in small zone",key = {ob1, z1})
+//pattern ObstacleInSmallZone(ob1: FTObstacle, z1 : FTZone){
+//	FTZone.size(z1, ::Small);
+//	FTObstacle.size(ob1, ::Big);
+//	FTObstacle.initiallyInside(ob1, z1);
+//}
+//
+//////////////////////////////////
+//////Zipline Constraints
+//////////////////////////////////
+//
+////#31
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline cannot be point-sized",key = {zl1})
+//pattern ZiplineSize(zl1 : FTZipline){
+//	FTZipline.size(zl1, ::Point);
+//}
+//
+////#32
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities must be zipline-type zones",key = {zl1, z1})
+//pattern ZiplineExtremitiesType(zl1 : FTZipline, z1 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	neg find helperZiplineTypeZoneFinder(z1);
+//} or {
+//	FTZipline.endZone(zl1, z1);
+//	neg find helperZiplineTypeZoneFinder(z1);
+//}
+//
+//private pattern helperZiplineTypeZoneFinder (z1 : FTZone){
+//	FTZone.type(z1, ::Zipline);
+//}
+//
+////#33
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline-type zones must be an extremity",key = {z1})
+//pattern ZiplineZoneMustBeExtremity(z1 : FTZone){
+//	FTZone.type(z1, ::Zipline);
+//	neg find helperZiplineExtremityFinder(z1);
+//}
+//
+//private pattern helperZiplineExtremityFinder (z1 : FTZone){
+//	FTZipline.startZone(_ , z1);
+//} or {
+//	FTZipline.endZone(_ , z1);
+//}
+//
+////#34
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Distance between extremity zones of a zipline must be specified", key = {zl1})
+//pattern ZiplineExtremityMustHaveDistance(zl1 : FTZipline, z1 : FTZone, z2 : FTZone) {
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	neg find helperZoneDistanceFinder(z1, z2);
+//}
+//
+//private pattern helperZoneDistanceFinder(z1 : FTZone, z2 : FTZone){
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, _);
+//}
+//
+////#35
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Extemity zones must be CT for small zipline",key = {zl1, z1, z2})
+//pattern ZiplineSmallExtremityDistance(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.size(zl1, ::Small);
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	neg find helperCTZoneFinder(z1, z2);
+//}
+//
+//private pattern helperCTZoneFinder (z1 : FTZone, z2 : FTZone){
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::CloseTo);
+//}
+//
+////#36
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "CT zipline zones must be related to a small zipline",key = {d1, z1, z2})
+//pattern ZiplineExtremitiesDistanceCT(d1 : FTDistance, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::CloseTo);
+//	neg find helperSmallZiplineFinder(zl1);
+//}
+//
+//private pattern helperSmallZiplineFinder (zl1 : FTZipline){
+//	FTZipline.size(zl1, ::Small);
+//}
+//
+////#37
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Extemity zones must be FF for medium zipline",key = {zl1, z1, z2})
+//pattern ZiplineMediumExtremityDistance(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.size(zl1, ::Medium);
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	neg find helperFFZoneFinder(z1, z2);
+//}
+//
+//private pattern helperFFZoneFinder (z1 : FTZone, z2 : FTZone){
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::FarFrom);
+//}
+//
+////#38
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "FF zipline zones must be related to a medium zipline",key = {d1, z1, z2})
+//pattern ZiplineExtremitiesDistanceFF(d1 : FTDistance, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::FarFrom);
+//	neg find helperMediumZiplineFinder(zl1);
+//}
+//
+//private pattern helperMediumZiplineFinder (zl1 : FTZipline){
+//	FTZipline.size(zl1, ::Medium);
+//}
+//
+////#39
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Extemity zones must be VFF for big zipline",key = {zl1, z1, z2})
+//pattern ZiplineBigExtremityDistance(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.size(zl1, ::Big);
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	neg find helperVFFZoneFinder(z1, z2);
+//}
+//
+//private pattern helperVFFZoneFinder (z1 : FTZone, z2 : FTZone){
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::VeryFarFrom);
+//}
+//
+////#40
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "VFF zipline zones must be related to a big zipline",key = {d1, z1, z2})
+//pattern ZiplineExtremitiesDistanceVFF(d1 : FTDistance, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	z1 != z2;
+//	FTZone.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTDistance.distance(d1, ::VeryFarFrom);
+//	neg find helperBigZiplineFinder(zl1);
+//}
+//
+//private pattern helperBigZiplineFinder (zl1 : FTZipline){
+//	FTZipline.size(zl1, ::Big);
+//}
+//
+////#41s
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline must have distinct extremities",key = {zl1, z1})
+//pattern ZiplineDistinctExtremities(zl1 : FTZipline, z1 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z1);
+//}
+//
+////#42
+////TODO: using the + is a little useless because of rule 18.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities cannot be contained by a common zone",key = {zl1, z1, z2})
+//pattern ZiplineDistinctExtremityContainment(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	find helperContainsZoneFinder+(z3, z1);
+//	find helperContainsZoneFinder+(z3, z2);	
+//} 
+////or {
+////	FTZipline.startZone(zl1, z1);
+////	FTZipline.endZone(zl1, z2);
+////	find helperContainsZoneFinder+(z2, z1);
+////} or {
+////	FTZipline.startZone(zl1, z1);
+////	FTZipline.endZone(zl1, z2);
+////	find helperContainsZoneFinder+(z1, z2);
+////}
+//
+////#43
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities must not be adjacent",key = {zl1, z1, z2})
+//pattern ZiplineNonAdjacentExtremities(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.isAdjacentTo(z1, z2);
+//	//this works because adjacency must be commutative
+//}
+//
+////#44
+////TODO: using the + is a little useless because of rule 18.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities cannot be contained by adjacent zones",key = {zl1, z1, z2})
+//pattern ZiplineDistinctExtremityContainmentAdjacent(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.isAdjacentTo(z3, z4);
+//	find helperContainsZoneFinder+(z3, z1);
+//	find helperContainsZoneFinder+(z4, z2);	
+//}
+//
+////#45
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities must not partially overlap",key = {zl1, z1, z2})
+//pattern ZiplineNonOverlappingExtremities(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.partiallyOverlaps(z1, z2);
+//	//this works because overlapping must be commutative
+//}
+//
+////#46
+////TODO: using the + is a little useless because of rule 18.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities cannot be contained by overlapping zones",key = {zl1, z1, z2})
+//pattern ZiplineDistinctExtremityContainmentOverlap(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.partiallyOverlaps(z3, z4);
+//	find helperContainsZoneFinder+(z3, z1);
+//	find helperContainsZoneFinder+(z4, z2);	
+//}
+//
+////#47
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities must have the same player allowances",key = {zl1, z1, z2})
+//pattern ZiplineDifferentAllowancesExtremities(zl1 : FTZipline, z1 : FTZone, z2 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.disallowedPlayers(z1, p1);
+//	neg find helperDisallowedPlayerFinder(z2, p1);
+//} or {
+//	FTZipline.startZone(zl1, z2);
+//	FTZipline.endZone(zl1, z1);
+//	FTZone.disallowedPlayers(z1, p1);
+//	neg find helperDisallowedPlayerFinder(z2, p1);
+//}
+//
+////#48
+////TODO: using the + is a little useless because of rule 18.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Zipline extremities cannot be contained by zones with different player allowance",key = {zl1, z1, z2})
+//pattern ZiplineDistinctExtremityContainmentAllowance(zl1 : FTZipline, z1 : FTZone, z2 : FTZone,  z3 : FTZone, z4 : FTZone){
+//	FTZipline.startZone(zl1, z1);
+//	FTZipline.endZone(zl1, z2);
+//	FTZone.disallowedPlayers(z3, p1);
+//	neg find helperDisallowedPlayerFinder(z4, p1);
+//	find helperContainsZoneFinder+(z3, z1);
+//	find helperContainsZoneFinder+(z4, z2);	
+//	//This works because of pattern 8.5
+//} 
+//or {
+//	FTZipline.startZone(zl1, z2);
+//	FTZipline.endZone(zl1, z1);
+//	FTZone.disallowedPlayers(z3, p1);
+//	neg find helperDisallowedPlayerFinder(z4, p1);
+//	find helperContainsZoneFinder+(z3, z1);
+//	find helperContainsZoneFinder+(z4, z2);	
+//	//this works for pattern 8.5
+//}
+//
+//////////////////////////////////
+//////Distance Constraints
+//////////////////////////////////
+//
+////#49
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance to a player",key = {p1})
+//pattern DistanceToPlayers(p1 : FTPlayer){
+//	FTObjectWithDistance.distanceClass(_, d1);
+//	FTDistance.toObject(d1, p1);
+//}
+//
+//////#OBSOLETE
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance between A and B as well as between B and A",key = {owd1, owd2})
+////pattern DistanceReciprocity(owd1 : FTObjectWithDistance, owd2 : FTObjectWithDistance){
+////	//Also covers self-distance
+////	FTObjectWithDistance.distanceClass(owd1, d1);
+////	FTDistance.toObject(d1, owd2);
+////	FTObjectWithDistance.distanceClass(owd2, d2);
+////	FTDistance.toObject(d2, owd1);
+////}
+//
+//////#OBSOLETE
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance from A to A",key = {owd1})
+////pattern DistanceToSelf(owd1 : FTObjectWithDistance){
+////	FTObjectWithDistance.distanceClass(owd1, d1);
+////	FTDistance.toObject(d1, owd1);
+////}
+//
+////#50
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance between a zone and any other type of owd unless the zone is a ziplineZone",key = {z1, owd1})
+//pattern DistanceBetweenZoneAndOtherOWD(z1 : FTZone, owd1 : FTObjectWithDistance){
+//	neg find helperZiplineZoneFinder(z1);
+//	neg find helperFTZone(owd1);
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, owd1);
+//} or {
+//	neg find helperZiplineZoneFinder(z1);
+//	neg find helperFTZone(owd1);
+//	FTObjectWithDistance.distanceClass(owd1, d1);
+//	FTDistance.toObject(d1, z1);
+//}
+//
+////#51
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance from obstacle to zone",key = {z1, o1})
+//pattern DistanceFromZoneToObstacle(o1 : FTObstacle, z1 : FTZone){
+//	FTObjectWithDistance.distanceClass(o1, d1);
+//	FTDistance.toObject(d1, z1);
+//}
+//
+////#52
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance between contained zones",key = {z1, z2})
+//pattern DistanceForContainedZones(z1 : FTZone, z2 : FTZone){
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTZone.contains(z1, z2);
+//} or {
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTZone.contains(z2, z1);
+//}
+//
+////#53
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance between adjacent zones",key = {z1, z2})
+//pattern DistanceForAdjacentZones(z1 : FTZone, z2 : FTZone){
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTZone.isAdjacentTo(z1, z2);
+//}
+//
+////#54
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Cannot have distance between overlapping zones",key = {z1, z2})
+//pattern DistanceForOverlappingZones(z1 : FTZone, z2 : FTZone){
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, z2);
+//	FTZone.partiallyOverlaps(z1, z2);
+//}
+//
+////#55
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Player cannot be {ct, dct} obstacle or zipline",key = {p1, owd1})
+//pattern DistanceBetweenPlayerAndOWD(p1 : FTPlayer, owd1 : FTObjectWithDistance){
+//	FTObjectWithDistance.distanceClass(p1, d1);
+//	FTDistance.toObject(d1, owd1);
+//	FTDistance.distance(d1, ::CloseTo);
+//} or {
+//	FTObjectWithDistance.distanceClass(p1, d1);
+//	FTDistance.toObject(d1, owd1);
+//	FTDistance.distance(d1, ::DangerouslyCloseTo);
+//}
+//
+////#56
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Obstacle cannot be {dct} a (zipline) zone",key = {z1, o1})
+//pattern DistanceLimitZoneAndObstacle(o1 : FTObstacle, z1 : FTZone){
+//	FTObjectWithDistance.distanceClass(z1, d1);
+//	FTDistance.toObject(d1, o1);
+//	FTDistance.distance(d1, ::DangerouslyCloseTo);
+//}
+//
+////TODO
+//////#57
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "Distance between player zones must be {vff}",key = {z1, z2})
+////pattern DistanceBetweenPlayerZones(z1 : FTZone, z2 : FTZone){
+////	FTPlayer.initiallyInside(_, z1);
+////	FTPlayer.initiallyInside(_, z2);
+////	FTObjectWithDistance.distanceClass(z1, d1);
+////	FTDistance.toObject(d1, z2);
+////	neg find helperDistanceValueFinder(d1, FTDistanceValue::VeryFarFrom);
+////}
+////
+////private pattern helperDistanceValueFinder (d1 : FTDistance, dv : FTDistanceValue){
+////	FTDistance.distance(d1, dv);
+////}
+//
+////#57.1
+////TODO, might ned to use this style later on for distance-related constraints
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Distance between player zones must be specified", key = {z1, z2})
+//pattern DistancePlayerZonesMustHaveDistance(z1 : FTZone, z2 : FTZone) {
+//	FTPlayer.initiallyInside(_, z1);
+//	FTPlayer.initiallyInside(_, z2);
+//	z1 != z2;
+//	neg find helperZoneDistanceFinder(z1, z2);
+//	neg find helperZoneDistanceFinder(z2, z1);
+//}
+//
+////#58
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "A dct B, B dct C = A {ct,dct} C", key = {o1, o2})
+//pattern DistanceTriangleInequalityA(o1 : FTObjectWithDistance, o2 : FTObjectWithDistance, o3 : FTObjectWithDistance) {
+//	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o2, o3, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o1, o3, FTDistanceValue::FarFrom);
+//} or {
+//	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o2, o3, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o1, o3, FTDistanceValue::VeryFarFrom);
+//}
+//
+//private pattern helperGeneralDistanceFinder(o1 : FTObjectWithDistance, o2 : FTObjectWithDistance, dv : FTDistanceValue){
+//	FTObjectWithDistance.distanceClass(o1, d1);
+//	FTDistance.toObject(d1, o2);
+//	FTDistance.distance(d1, dv);
+//} or {
+//	FTObjectWithDistance.distanceClass(o2, d1);
+//	FTDistance.toObject(d1, o1);
+//	FTDistance.distance(d1, dv);
+//}
+//
+////#59
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "(A ct B, B ct C) or (A dct B, B ff C) or (A dct B, B ct C) = A {ff, ct, dct} C", key = {o1, o2})
+//pattern DistanceTriangleInequalityB(o1 : FTObjectWithDistance, o2 : FTObjectWithDistance, o3 : FTObjectWithDistance) {
+//	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::CloseTo);
+//	find helperGeneralDistanceFinder(o2, o3, FTDistanceValue::CloseTo);
+//	find helperGeneralDistanceFinder(o1, o3, FTDistanceValue::VeryFarFrom);
+//} or {
+//	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o2, o3, FTDistanceValue::FarFrom);
+//	find helperGeneralDistanceFinder(o1, o3, FTDistanceValue::VeryFarFrom);
+//}
+// or {
+//	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+//	find helperGeneralDistanceFinder(o2, o3, FTDistanceValue::CloseTo);
+//	find helperGeneralDistanceFinder(o1, o3, FTDistanceValue::VeryFarFrom);
+//}
+//
+////TODO
+//////#60
+////@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "A, B obstacles or contained zone in same small zone, cannot have A {ct, ff, vff} B", key = {o1, o2})
+////pattern DistanceWithinZoneA(z1 : FTZone, o1 : FTObjectWithDistance, o2 : FTObjectWithDistance) {
+////	FTZone.size(z1, ::Small);
+////	find helperObjectWithinZoneFinder(o1, z1);
+////	find helperObjectWithinZoneFinder(o2, z1);
+////	o1 != o2;
+////	neg find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+////}
+////
+////private pattern helperObjectWithinZoneFinder(o1 : FTObjectWithDistance, z1 : FTZone) {
+////	FTPlayer.initiallyInside(o1, z1);
+////} or {
+////	FTObstacle.initiallyInside(o1, z1);
+////} or {
+////	FTZone.contains(z1, o1);
+////}
+//
+////TODO
+//////#61
+////@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "A, B obstacles or contained zone in same medium zone, cannot have A {ff, vff} B", key = {o1, o2})
+////pattern DistanceWithinZoneB(z1 : FTZone, o1 : FTObjectWithDistance, o2 : FTObjectWithDistance) {
+////	FTZone.size(z1, ::Medium);
+////	find helperObjectWithinZoneFinder(o1, z1);
+////	find helperObjectWithinZoneFinder(o2, z1);
+////	o1 != o2;
+////	neg find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::DangerouslyCloseTo);
+////} or {
+////	FTZone.size(z1, ::Medium);
+////	find helperObjectWithinZoneFinder(o1, z1);
+////	find helperObjectWithinZoneFinder(o2, z1);
+////	o1 != o2;
+////	neg find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::CloseTo);
+////}
+//
+////TODO
+//////#62
+////@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "A, B obstacles or contained zone in same big zone, cannot have A {vff} B", key = {o1, o2})
+////pattern DistanceWithinZoneC(z1 : FTZone, o1 : FTObjectWithDistance, o2 : FTObjectWithDistance) {
+////	FTZone.size(z1, ::Big);
+////	find helperObjectWithinZoneFinder(o1, z1);
+////	find helperObjectWithinZoneFinder(o2, z1);
+////	o1 != o2;
+////	find helperGeneralDistanceFinder(o1, o2, FTDistanceValue::VeryFarFrom);
+////} or {
+////	FTZone.size(z1, ::Big);
+////	find helperObjectWithinZoneFinder(o1, z1);
+////	find helperObjectWithinZoneFinder(o2, z1);
+////	o1 != o2;
+////	neg   find helperGeneralDistanceFinder(o1, o2, _);
+////}

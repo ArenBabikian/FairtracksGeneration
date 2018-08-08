@@ -1,0 +1,520 @@
+package ca.mcgill.ecse.fairtracks.queries
+
+import "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+///****************************/
+////"InstanceCount" Constraints
+///****************************/
+//
+////1. Root Class
+///****************************/
+//
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Root element count", key = {o1})
+////pattern countFairtracksModel(o1 : Fairtracksmodel, o2 : Fairtracksmodel){
+////	Fairtracksmodel(o1);
+////	Fairtracksmodel(o2);
+////	o1 != o2;
+////}
+//
+////2. Static Classes
+///****************************/
+//
+//private pattern helperFTPlayer(o1 : FTPlayer){
+//	FTPlayer(o1);
+//}
+//
+//private pattern helperFTZone(o1 : FTZone){
+//	FTZone(o1);
+//}
+//
+//private pattern helperFTObstacle(o1 : FTObstacle){
+//	FTObstacle(o1);
+//}
+//
+//private pattern helperFTZipline(o1 : FTZipline){
+//	FTZipline(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Making Static Objects Abstract", key = {o1})
+//pattern countStaticObject(o1 : FTStaticObject){
+//	FTStaticObject(o1);
+//	neg find helperFTPlayer(o1);
+//	neg find helperFTZone(o1);
+//	neg find helperFTObstacle(o1);
+//	neg find helperFTZipline(o1);
+//}
+//
+////This is not necessary 
+////It is specified in Constraint #2
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Position count", key = {o1})
+////pattern countPosition(o1 : FTPosition){
+////	FTPosition(o1);
+////}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player count", key = {o1})
+//pattern countPlayer(o1 : FTPlayer, o2 : FTPlayer, o3 : FTPlayer/*, o4 : FTPlayer */){
+//	FTPlayer(o1);
+//	FTPlayer(o2);
+//	FTPlayer(o3);
+////	FTPlayer(o4);
+//	o1 != o2;
+//	o1 != o3;
+//	o2 != o3;
+////	o1 != o4;
+////	o2 != o4;
+////	o3 != o4;
+//}
+//
+////TODO: 
+////pattern playerBound(countPlayer : EInt){
+////	countPlayer == count find findPlayer(_);
+////	//EInt(countPlayer);
+////	countPlayer != 2;
+////}
+////private pattern findPlayer(p1 : FTPlayer) {
+////	FTPlayer(p1);
+////}
+//
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "PickUpColorClass count", key = {o1})
+//pattern countPickUpColorClass(o1 : FTPickUpColorClass){
+//	FTPickUpColorClass(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Zone count", key = {o1})
+//pattern countZone(o1 : FTZone){
+//	FTZone(o1);
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Obstacle count", key = {o1})
+//pattern countObstacle(o1 : FTObstacle, o2 : FTObstacle, o3 : FTObstacle){
+//	FTObstacle(o1);
+//	FTObstacle(o2);
+//	FTObstacle(o3);
+//	o1 != o2;
+//	o1 != o3;
+//	o2 != o3;
+//}
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Zipline count", key = {o1})
+//pattern countZipline(o1 : FTZipline){
+//	FTZipline(o1);
+//}
+//
+//
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Distance count", key = {o1})
+//pattern dist(o1 : FTDistance){
+//	FTDistance(o1);
+//}
+//
+//
+////3. Dynamic Classes
+///****************************/
+//
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Trajectory count", key = {o1})
+////pattern countTrajectory(o1 : FTTrajectory){
+////	FTTrajectory(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "State count", key = {o1})
+////pattern countState(o1 : FTState){
+////	FTState(o1);
+////}
+////
+////
+////private pattern helperFTDistanceObs(o1 : FTDistanceObs){
+////	FTDistanceObs(o1);
+////}
+////
+////private pattern helperFTZoneObs(o1 : FTZoneObs){
+////	FTZoneObs(o1);
+////}
+////
+////private pattern helperFTPickupObs(o1 : FTPickUpObs){
+////	FTPickUpObs(o1);
+////}
+////
+////private pattern helperFTHangingObs(o1 : FTHangingObs){
+////	FTHangingObs(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Making Observations Abstract", key = {o1})
+////pattern countObservation(o1 : FTObservation){
+////	FTObservation(o1);
+////	neg find helperFTDistanceObs(o1);
+////	neg find helperFTZoneObs(o1);
+////	neg find helperFTPickupObs(o1);
+////	neg find helperFTHangingObs(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "DistanceObs count", key = {o1})
+////pattern countDistanceObs(o1 : FTDistanceObs){
+////	FTDistanceObs(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "ZoneObs count", key = {o1})
+////pattern countZoneObs(o1 : FTZoneObs){
+////	FTZoneObs(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "PickUpObs count", key = {o1})
+////pattern countPickUpObs(o1 : FTPickUpObs){
+////	FTPickUpObs(o1);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "HangingObs count", key = {o1})
+////pattern countHangingsObs(o1 : FTHangingObs){
+////	FTHangingObs(o1);
+////}
+//
+//
+///****************************/
+////StaticObject Constraints
+///****************************/
+//
+//////No.1 From checklist
+//////Check if the object is out of the field
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Object out of court", key = {o1})
+////pattern outOfField(o1 : FTStaticObject) {
+////	find lowerBoundOfTrack(o1, low);
+////	find upperBoundOfTrack(o1, high); 
+////	FTStaticObject.lengthX(o1, lengthx);
+////	FTStaticObject.lengthY(o1, lengthy);
+////	FTStaticObject.position.LLx(o1, llx);
+////	FTStaticObject.position.LLy(o1, lly);
+////	check( (llx < low) || (lly < low) || (llx + lengthx) > high || (lly + lengthy) > high);
+////}
+//
+////No.2 From checklist
+////Check if object has exactly 1 position
+////Note that upper limit of 1 asociated position is set by the metamodel
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Object does not have exactly 1 FTPosition", key = {o1})
+//pattern notOnePosition(o1 : FTStaticObject) {
+//	neg find StaticObjectWithPosition(o1);
+//}
+//
+//private pattern StaticObjectWithPosition(o1 : FTStaticObject){
+//	FTStaticObject.position(o1, _);
+//}
+//
+//
+///****************************/
+////Player Constraints
+///****************************/
+//
+//////No.2 from checklist
+//////Player has to start from one of the starting corner
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player does not start at a valid location", key = {player1})
+////pattern incorrectStartPlayer(player1 : FTPlayer){
+////	neg find startingPositionPlayer(player1);
+////}
+////
+////////Helper pattern to see if player has the correct starting position
+//////private pattern startingPositionPlayer(player1 : FTPlayer){
+//////	find lowerBoundOfTrack(player1, low);
+//////	FTPlayer.position.LLx(player1, llx);
+//////	FTPlayer.position.LLy(player1, lly);
+////// 	check(llx != low || lly != low);
+//////} or {
+//////	find upperBoundOfTrack(player1, high);
+//////	FTPlayer.position.LLx(player1, llx);
+//////	FTPlayer.position.LLy(player1, lly);
+//////	check(llx != high || lly != high);
+//////} or {
+//////	find lowerBoundOfTrack(player1, low);
+//////	find upperBoundOfTrack(player1, high);
+//////	FTPlayer.position.LLx(player1, llx);
+//////	FTPlayer.position.LLy(player1, lly);
+//////	check(llx != high || lly != low);
+//////} or {
+//////	find lowerBoundOfTrack(player1, low);
+//////	find upperBoundOfTrack(player1, high);
+//////	FTPlayer.position.LLx(player1, llx);
+//////	FTPlayer.position.LLy(player1, lly);
+//////	check(llx != low || lly != high);
+//////}
+////
+////private pattern startingPositionPlayer(player1 : FTPlayer){
+//// find lowerBoundOfTrack(player1, low);
+//// find upperBoundOfTrack(player1, high);
+//// FTPlayer.position.LLx(player1, llx);
+//// FTPlayer.position.LLy(player1, lly);
+//// check((llx == low && lly == low) || (llx == high && lly == low) || (llx == high && lly == high) || (llx == low && lly == high));
+////}
+//
+//
+////No.4 from checklist
+////Check if two player has the same role
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "players have duplicate role", key = {p1, p2})
+//pattern duplicatePlayerRole(p1 : FTPlayer, p2 : FTPlayer, commonRole : FTRole) {
+//	FTPlayer.role(p1, commonRole);
+//	FTPlayer.role(p2, commonRole);
+//	p1 != p2;
+//}
+//
+////No. 5 from checklist
+////Player must have one  role
+//@Constraint(targetEditorId ="ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "player does not exactly have one role", key = {p1})
+//pattern PlayerRole(p1 : FTPlayer) {
+//	neg find findPlayerRole(p1);
+//}
+//
+//private pattern findPlayerRole(p1 : FTPlayer){
+//	FTPlayer.role(p1, _);
+//}
+//
+////Restrict model to have 2 players
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+////            severity = "error",
+////            message = "Not 2 players",
+////            key = {countPlayer})
+////pattern playerBound(countPlayer){
+////	countPlayer == count find findPlayer(_);
+////	countPlayer != 2;
+////}
+////private pattern findPlayer(p1 : FTPlayer) {
+////	FTPlayer(p1);
+////}
+//
+////BACKUP
+//////No.5 from checklist
+//////Must start from different position
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+////            severity = "error",
+////            message = "duplicate starting corner",
+////            key = {player1, player2})
+////pattern duplicateStartPosition(player1 : FTPlayer, player2 : FTPlayer){
+////	FTPlayer.position.LLx(player1,samex);
+////	FTPlayer.position.LLx(player2,samex);
+////	FTPlayer.position.LLy(player1,samey);
+////	FTPlayer.position.LLy(player2,samey);
+////	player1 != player2;
+////}
+////
+////pattern playerPosition(staticObj : FTStaticObject, pos : FTPosition){
+////	FTStaticObject.position(staticObj, pos);
+////}
+////
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",
+////            severity = "error",
+////            message = "player without position",
+////            key = {staticObj})
+////pattern negplayerPosition(staticObj : FTStaticObject){
+////	neg find playerPosition(staticObj, _);
+////}
+//
+////No.6 from checklist
+////canPickUp cannot be true unless there are movable objects
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "canPickUp is true but not pikable objects",key = {p1})
+//pattern canPickUpAndObstacleCorrespondance(p1 : FTPlayer){
+//	FTPlayer.canPickUpObject(p1, true);
+//	FTObstacle.isMoveable(_, false);
+//}
+//
+////No.6.5
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player has no value for canPickUp", key = {o1})
+//pattern noCanPickUp(o1 : FTPlayer) {
+//	neg find canPickUpVal(o1);
+//}
+//
+//private pattern canPickUpVal(o1 : FTPlayer){
+//	FTPlayer.canPickUpObject(o1, _);
+//}
+//
+//////No.7 from checklist
+//////Player who can pickup has to have pickup color associated
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No Pickable Obstacle color",key = {p1})
+////pattern noPickupColor(p1: FTPlayer){
+////	FTPlayer.canPickUpObject(p1, true);
+////	neg find playerByColor(p1);
+////}
+////Helper pattern to check if player has any pickable color
+////private pattern playerByColor(p1 : FTPlayer){
+////	FTPlayer.pickUpColor.color(p1,::White);
+////} or {
+////	FTPlayer.pickUpColor.color(p1,::Red);
+////} or {
+////	FTPlayer.pickUpColor.color(p1,::Blue);
+////} or {
+////	FTPlayer.pickUpColor.color(p1,::Yellow);
+////}
+//
+//////No.8 from checklist
+//////Player cannot pick up objects of color "Other"
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl",severity = "error",message = "No Pickable Obstacle color",key = {p1, c1})
+////pattern OtherPickupColor(p1: FTPlayer, c1 : FTPickUpColorClass){
+////	FTPickUpColorClass.color(c1, ::Other);
+////	FTPlayer.pickUpColor(p1, c1);
+////}
+//
+//
+//
+//
+///****************************/
+////Zone Constraints
+///****************************/
+//
+//////No.9 from checklist
+//////Zone A contains Zone B ⇔ LL & LL+size of B are both contained in Zone A
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Incorrect containment shape", key = {z1, z2})
+////pattern incorrectContainShape(z1 : FTZone, z2 : FTZone){
+////	FTZone.contains(z1, z2);
+////	FTZone.position.LLx(z1, llx1);
+////	FTZone.position.LLy(z1, lly1);
+////	FTZone.position.LLx(z2, llx2);
+////	FTZone.position.LLy(z2, lly2);
+////	FTZone.lengthX(z1, lengthx1);
+////	FTZone.lengthY(z1, lengthy1);
+////	FTZone.lengthX(z2, lengthx2);
+////	FTZone.lengthY(z2, lengthy2);
+////	check(llx1 > llx2 || lly1 > lly2 || (llx2 + lengthx2) > (llx1 + lengthx1) || (lly2 + lengthy2) > (lly1 + lengthy1) );
+////} 
+//
+//////No.10 from checklist
+//////Zone A is adj to Zone B with its condition
+////pattern incorrectAdjBoundary(z1 : FTZone, z2 : FTZone){
+////	//z2 is bellow z1
+////	FTZone.isAdjacentTo(z1,z2);
+////	FTZone.position.LLy(z1, lly1);
+////	FTZone.position.LLy(z2, lly2);
+////	FTZone.position.LLx(z1, llx1);
+////	FTZone.position.LLx(z2, llx2);
+////	FTZone.lengthY(z2, lengthy2);
+////	FTZone.lengthX(z1, lengthx1);
+////	FTZone.lengthX(z2, lengthx2);
+////	//Lower of A is on the same height as Upper of B
+////	//B can not go outside of the correct range
+////	check( (lly1 == (lly2+lengthy2)) && (llx2 < (llx1 + lengthx1)) && (llx2 + lengthx2) > llx1);
+////}//Or cases will be added here
+//
+//////No.11 from checklist
+//////Any corner where a player is starting from must absolutely be within a zone allowed by the player.
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "player initially not in allowed zone", key = {p1, z1})
+////pattern initalPositionInCorrectZone(p1 : FTPlayer, z1 : FTZone){
+////	FTPlayer.position.LLx(p1, px);
+////	FTPlayer.position.LLy(p1, py);
+////	FTZone.disallowedPlayers(z1, p1);
+////	FTZone.position.LLx(z1, zx);
+////	FTZone.position.LLy(z1, zy);
+////	FTZone.lengthX(z1, zlx);
+////	FTZone.lengthY(z1, zly);
+////	check(px > zx && py > zy && px < (zx + zlx) && py < (zy + zly));
+////} 
+//
+//////No.12 from checklist
+//////TODO To be discussed
+//////EVERY ZONE NEEDS AN adjacent allowed zone unless it contains a zipline to an allowed zone
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "no allowed adjacent zones", key = {z1, p1})
+////pattern noAdjacentAllowedZone(z1 : FTZone, zl1 : FTZipline, p1 : FTPlayer){
+////	FTZone.isAdjacentTo(z1, zAdj);
+////	neg find disallowedZoneForPlayer(p1, z1);//exists a zone where player is allowed
+////	neg find allowedAdjacentZone(p1,zAdj);
+////	
+////	FTZipline.position.LLx(zl1, zlx);
+////	FTZipline.position.LLy(zl1, zly);
+////	FTZone.disallowedPlayers(z1, p1);
+////	FTZone.position.LLx(z1, zx);
+////	FTZone.position.LLy(z1, zy);
+////	FTZone.lengthX(z1, zlx);
+////	FTZone.lengthY(z1, zly);
+////	//check(px > zx && py > zy && px < (zx + zlx) && py < (zy + zly));
+////}
+////
+////private pattern allowedAdjacentZone(p1 : FTPlayer, z1 : FTZone){
+////	FTZone.disallowedPlayers(z1, p1);//FILLER
+////}
+////
+////private pattern disallowedZoneForPlayer(p1 : FTPlayer, z1 : FTZone){
+////	FTZone.disallowedPlayers(z1, p1);
+////}
+//
+//
+///****************************/
+////Obstacles Constraints
+///****************************/
+//
+////No.13 from checklist
+////All non-movable block must be of color "Other" 
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "non-movable block that is not color Other", key = {ob1})
+//pattern nonMovableObstacleOtherColor(ob1 : FTObstacle){
+//	FTObstacle.isMoveable(ob1, false);
+//	neg find obstacleColoredOther(ob1, _);
+//}
+//
+//private pattern obstacleColoredOther(ob1 : FTObstacle, c1 : FTPickUpColor) {
+//	FTObstacle.color(ob1, c1);
+//	c1 == FTPickUpColor::Other;
+//}
+//
+////No.14 from checklist
+////All non-movable block must be of color "Other" 
+////@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "movable object cannot be colored Other", key = {ob1})
+////pattern movableObstacleNotColoredOther(ob1 : FTObstacle){
+////	FTObstacle.isMoveable(ob1, true);
+////	FTObstacle.color(ob1, ::Other);
+////}
+//
+////No.14.1 from checklist
+////TEMPORARY
+////all obstacles must have color
+//@Constraint(targetEditorId = "ca.mcgill.ecse.fairtracks.FairtracksDsl", severity = "error", message = "Player has no value for canPickUp", key = {o1})
+//pattern noColor(o1 : FTPlayer) {
+//	neg find colorVal(o1);
+//}
+//
+//private pattern colorVal(o1 : FTPlayer){
+//	FTPlayer.canPickUpObject(o1, _);
+//}
+//
+//
+//
+//
+////No.20 from checklist with concrete value
+////@Constraint(targetEditorId = "org.eclipse.emf.ecore.presentation.ReflectiveEditorID",
+////            severity = "error",
+////            message = "The obs close to corner",
+////            key = {o1})
+////pattern obstacleCloseToCorner(o1 : FTObstacle){
+////	find lowerBoundOfTrack(o1, low);
+////	FTObstacle.LLx(o1, llx1);
+////	check(llx1 < low+2);
+////} or {
+////	find lowerBoundOfTrack(o1, low);
+////	FTObstacle.LLy(o1, lly1);
+////	check(lly1 < low+2);
+////} or {
+////	find upperBoundOfTrack(o1, high);
+////	FTObstacle.URx(o1, urx1);
+////	check(urx1 > high-2);
+////} or {
+////	find upperBoundOfTrack(o1, high);
+////	FTObstacle.URy(o1, ury1);
+////	check(ury1 > high-2);
+////}
+//
+//////////////////////////////////
+//////Zipline Constraints
+//////////////////////////////////
+////
+//////No.24 from checklist
+////pattern identicalPositionZipline(zipline : FTZipline) {
+////	FTZipline.lengthX(zipline, lengthx);
+////	FTZipline.lengthY(zipline, lengthy);
+////	check(lengthx == 0 && lengthy == 0);
+////}
+////
+///****************************/
+////Helper patterns
+///****************************/
+////private pattern upperBoundOfTrack(o1 : FTPlayer, high : EInt ) {
+////	Fairtracksmodel.staticObjects(fairtrack,o1);
+////	Fairtracksmodel.boardUpperBound(fairtrack, high);	
+////}
+////private pattern lowerBoundOfTrack(o1 : FTPlayer, low : EInt ) {
+////	Fairtracksmodel.staticObjects(fairtrack,o1);
+////	Fairtracksmodel.boardLowerBound(fairtrack, low);	
+////}
+////private pattern contains(z1 : FTZone, z2 : FTZone){
+////	FTZone.contains(z1, z2);
+////}

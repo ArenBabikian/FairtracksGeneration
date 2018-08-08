@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:LogicProblem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="http://www.bme.hu/mit/inf/dslreasoner/logic/model/problem" xmlns:language_1="http://www.bme.hu/mit/inf/dslreasoner/logic/model/language">
+  <constants xsi:type="language_1:ConstantDefinition">
+    <type xsi:type="language_1:IntTypeReference"/>
+  </constants>
+</language:LogicProblem>

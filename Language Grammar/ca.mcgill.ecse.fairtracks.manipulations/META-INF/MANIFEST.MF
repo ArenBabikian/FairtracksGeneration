@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Manipulations
+Bundle-SymbolicName: ca.mcgill.ecse.fairtracks.manipulations
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: ca.mcgill.ecse.fairtracks;bundle-version="1.0.0",
+ org.eclipse.emf.ecore;bundle-version="2.13.0",
+ org.eclipse.emf.ecore.xmi

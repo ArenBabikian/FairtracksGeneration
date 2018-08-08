@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ft2logic
+Bundle-SymbolicName: ca.mcgill.ecse.fairtracks.ft2logic
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.core.runtime,
+ hu.bme.mit.inf.dslreasoner.logic.model;bundle-version="1.0.0",
+ ca.mcgill.ecse.fairtracks;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.13.0"

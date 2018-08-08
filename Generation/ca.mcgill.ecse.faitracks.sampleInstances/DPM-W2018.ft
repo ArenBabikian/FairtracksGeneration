@@ -1,0 +1,309 @@
+boardLowerBound : 0 ;
+boardUpperBound : 12;
+minDistanceFromCorneForBlock : 2 ;
+//Players
+
+Player = {
+name : redPlayer;
+size: (0, 0);
+LL: (12, 0);
+role : Attack;
+canPickUp;
+pickUpColor: White;
+}
+
+Player = {
+name : greenPlayer;
+size: (0, 0);
+LL: (0, 12);
+role : Attack;
+canPickUp;
+pickUpColor: White;
+}
+
+//Zones
+
+Zone = {
+	name : greenZone;
+	size: (8, 5);
+	LL: (4, 0);
+	zoneType : Green;
+	contains: greenTargetZone;
+}
+
+Zone = {
+	name : greenTargetZone;
+	size: (2, 1);
+	LL: (9, 1);
+	zoneType : Search;
+}
+
+Zone = {
+	name : redZone;
+	size: (8, 5);
+	LL: (0, 7);
+	zoneType : Red;
+	contains: redTargetZone;
+}
+
+Zone = {
+	name : redTargetZone;
+	size: (1, 2);
+	LL: (1, 9);
+	zoneType : Search;
+}
+
+Zone = {
+	name : tunnel;
+	size: (1, 2);
+	LL: (3, 5);
+	zoneType : Passage;
+}
+
+Zone = {
+	name : bridge;
+	size: (1, 2);
+	LL: (7, 5);
+	zoneType : Passage;
+}
+
+//Obstacles
+
+Obstacle = {
+	name : greenFlag;
+	size: (1, 1);
+	LL:(10, 1);
+	isMoveable;
+	color: White;
+}
+
+Obstacle = {
+	name : redFlag;
+	size: (1, 1);
+	LL:(1, 9);
+	isMoveable;
+	color: White;
+}
+
+//Trajectories
+/*
+Trajectory = {
+	player : redPlayer;
+	states : {
+
+		State = [
+			name : sr0;
+			position : (12, 0);
+			inZone : greenZone;
+			nextState : sr1;
+		]
+		
+		State = [
+			name : sr1;	
+			position : (4, 5);
+			inZone : greenZone;
+			nextState : sr2;
+		]
+		
+		State = [
+			name : sr2;
+			position : (4, 5);
+			inZone : tunnel;
+			nextState : sr3;
+		]
+		
+		State = [
+			name : sr3;
+			position : (4, 7);
+			inZone : tunnel;
+			nextState : sr4;
+		]
+		
+		State = [
+			name : sr4;
+			position : (4, 7);
+			inZone : redZone;
+			nextState : sr5;
+		]
+		
+		State = [
+			name : sr5;
+			position : (2, 9);
+			inZone : redZone;
+			nextState : sr6;
+		]
+		
+		State = [
+			name : sr6;
+			position : (2, 9);
+			inZone : redTargetZone;
+			nextState : sr7;
+		]
+		
+		State = [
+			name : sr7;
+			position : (2, 9);
+			inZone : redTargetZone;
+			pickedUp : redFlag;
+			nextState : sr8;
+		]
+		
+		State = [
+			name : sr8;
+			position : (2, 9);
+			inZone : redZone;
+			pickedUp : redFlag;
+			nextState : sr9;
+		]
+		
+		State = [
+			name : sr9;
+			position : (7, 7);
+			inZone : redZone;
+			pickedUp : redFlag;
+			nextState : sr10;
+		]
+		
+		State = [
+			name : sr10;position : (7, 7);
+			inZone : bridge;
+			pickedUp : redFlag;
+			nextState : sr11;
+		]
+		
+		State = [
+			name : sr11;
+			position : (7, 5);
+			inZone : bridge;
+			pickedUp : redFlag;
+			nextState : sr12;
+		]
+		
+		State = [
+			name : sr12;
+			position : (7, 5);
+			inZone : greenZone;
+			pickedUp : redFlag;
+			nextState : sr13;
+		]
+		
+		State = [
+			name : sr13;
+			position : (12, 0);
+			inZone : greenZone;
+			pickedUp : redFlag;
+		]
+	}
+}
+
+		//GreenStates
+		Trajectory = {
+			player : greenPlayer;
+			states : {
+				
+		State = [
+			name : sg0;
+			position : (0, 12);
+			inZone : redZone;
+			nextState : sg1;
+		]
+		
+		State = [
+			name : sg1;
+			position : (7, 7);
+			inZone : redZone;
+			nextState : sg2;
+		]
+		
+		State = [
+			name : sg2;
+			position : (7, 7);
+			inZone : bridge;
+			nextState : sg3;
+		]
+		
+		State = [
+			name : sg3;
+			position : (7, 5);
+			inZone : bridge;
+			nextState : sg4;
+		]
+		
+		State = [
+			name : sg4;
+			position : (7, 5);
+			inZone : greenZone;
+			nextState : sg5;
+		]
+		
+		State = [
+			name : sg5;
+			position : (9, 2);
+			inZone : greenZone;
+			nextState : sg6;
+		]
+		
+		State = [
+			name : sg6;
+			position : (9, 2);
+			inZone : greenTargetZone;
+			nextState : sg7;
+		]
+		
+		State = [
+			name : sg7;
+			position : (9, 2);
+			inZone : greenTargetZone;
+			pickedUp : greenFlag;
+			nextState : sg8;
+		]
+		
+		State = [
+			name : sg8;
+			position : (9, 2);
+			inZone : greenZone;
+			pickedUp : greenFlag;
+			nextState : sg9;
+		]
+		
+		State = [
+			name : sg9;
+			position : (4, 5);
+			inZone : greenZone;
+			pickedUp : greenFlag;
+			nextState : sg10;
+		]
+		
+		State = [
+			name : sg10;
+			position : (4, 5);
+			inZone : tunnel;
+			pickedUp : greenFlag;
+			nextState : sg11;
+		]
+		
+		State = [
+			name : sg11;
+			position : (4, 7);
+			inZone : tunnel;
+			pickedUp : greenFlag;
+			nextState : sg12;
+		]
+		
+		State = [
+			name : sg12;
+			position : (4, 7);
+			inZone : redZone;
+			pickedUp : greenFlag;
+			nextState : sg13;
+		]
+		
+		State = [
+			name : sg13;
+			position : (0, 12);
+			inZone : redZone;
+			pickedUp : greenFlag;
+		]
+	}
+}
+* */

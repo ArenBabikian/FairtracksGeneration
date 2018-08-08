@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fairtracksDsl:Fairtracksmodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fairtracksDsl="http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl">
+  <staticObjects xsi:type="fairtracksDsl:FTObstacle">
+    <position/>
+  </staticObjects>
+  <staticObjects xsi:type="fairtracksDsl:FTObstacle">
+    <position/>
+  </staticObjects>
+  <staticObjects xsi:type="fairtracksDsl:FTPlayer">
+    <position/>
+  </staticObjects>
+</fairtracksDsl:Fairtracksmodel>

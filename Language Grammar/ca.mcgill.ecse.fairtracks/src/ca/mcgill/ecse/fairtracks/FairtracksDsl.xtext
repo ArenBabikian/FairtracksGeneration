@@ -1,0 +1,176 @@
+grammar ca.mcgill.ecse.fairtracks.FairtracksDsl with org.eclipse.xtext.common.Terminals
+
+generate fairtracksDsl "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+
+Fairtracksmodel:
+//	"boardLowerBound" ":" boardLowerBound = INT ";"//INT supported
+//	"boardUpperBound" ":" boardUpperBound = INT ";"//INT supported
+//	"minDistanceFromCorneForBlock" ":" distanceFromCorner = INT ";"//INT supported
+	//Temp
+//	players += FTPlayer+
+//	zones += FTZone+
+//	obstacles += FTObstacle*
+//	ziplines += FTZipline*
+	staticObjects += FTStaticObject*
+	initialDistances += FTDistance*
+	//Dynamic
+	//trajectories += FTTrajectory*
+;
+
+enum FTPickUpColor:
+	Red = "Red" | Blue = "Blue" | Yellow = "Yellow" | White = "White" | Other = "Other"
+;
+
+enum FTRole:
+	Attack = "Attack" | Defense = "Defense"
+;
+
+enum FTZoneType:
+	Background = "Background" | Green = "Green" | Red = "Red" | Passage = "Passage" | Ball = "Ball" | Search = "Search" | Start = "Start" | Zipline = "Zipline"/*| restricted */
+;
+
+enum FTDistanceValue:
+	VeryFarFrom = "VeryFarFrom" | FarFrom = "FarFrom" | CloseTo = "CloseTo" | DangerouslyCloseTo = "DangerouslyCloseTo" /*is the same as "atEdgeOf" */
+;
+
+enum FTSize:
+	Point = "Point" | Small = "Small" | Medium = "Medium" | Big = "Big"
+;
+
+//////////
+//Static Portion
+//////////
+
+FTStaticObject returns FTStaticObject:
+	FTObjectWithDistance | FTZipline
+;
+
+FTObjectWithDistance returns FTObjectWithDistance:
+	FTPlayer | FTZone | FTObstacle
+;
+
+FTPlayer returns FTPlayer:
+	"Player" "=" "{"
+	"name" ":" name = ID ";"
+//	"size" ":" "(" lengthX = INT "," lengthY = INT ")" ";"//INT supported
+	"size" ":"  size = FTSize  ";"
+//	position = FTPosition//INT supported
+	"role" ":" role = FTRole ";"
+	( "inside" ":" initiallyInside = [FTZone]  ";" )?
+	( canPickUpObject ?= "canPickUp" ";" )?
+	( "pickUpColor" ":" pickUpColor += FTPickUpColorClass ("," pickUpColor += FTPickUpColorClass)* ";" )? //ATTRIBUTE WITH MULTIPLE VALUES
+	( "distance" ":" distanceClass += FTDistance ";" )* 
+	("Real" "Coordinates" ":" "[" coordinates = FTRealCoordinates "]")?
+	"}"
+;
+
+FTPickUpColorClass returns FTPickUpColorClass:
+	color = FTPickUpColor
+;
+
+FTZone returns FTZone:
+	"Zone" "=" "{"
+	"name" ":" name = ID ";"
+//	"size" ":" "(" lengthX = INT "," lengthY = INT ")" ";"//INT supported
+	"size" ":" size = FTSize ";"
+//	position = FTPosition//INT supported
+	"zoneType" ":" type = FTZoneType ";"
+	("contains" ":" contains += [FTZone] ("," contains += [FTZone])* ";")?
+	("partiallyOverlaps" ":" partiallyOverlaps += [FTZone] ("," partiallyOverlaps += [FTZone])* ";")?
+	("isAdjacentTo" ":" isAdjacentTo += [FTZone] ("," isAdjacentTo += [FTZone])* ";")?
+	("disallowedPlayers" ":" disallowedPlayers += [FTPlayer] ("," disallowedPlayers += [FTPlayer])* ";")?
+	( "distance" ":" distanceClass += FTDistance ";" )* 
+	("Real" "Coordinates" ":" "[" coordinates = FTRealCoordinates "]")?
+	"}"
+	
+;
+
+FTObstacle returns FTObstacle:
+	"Obstacle" "=" "{"
+	"name" ":" name = ID ";"
+//	"size" ":" "(" lengthX = INT "," lengthY = INT ")" ";"//INT supported
+	"size" ":" size = FTSize ";"
+//	position = FTPosition//INT supported
+	(isMoveable ?= "isMoveable" ";")?
+	"color" ":" color = FTPickUpColor ";"
+	("inside" ":" initiallyInside = [FTZone]  ";" )?
+	//Dynamic
+	( "disallowedZones" ":" disallowedZones += [FTZone] ("," disallowedZones += [FTZone])* ";" )?
+	( "distance" ":" distanceClass += FTDistance ";" )* 
+	("Real" "Coordinates" ":" "[" coordinates = FTRealCoordinates "]")?
+	"}"
+;
+
+FTZipline returns FTZipline:
+	"Zipline" "=" "{"
+	"name" ":" name = ID ";"
+//	"size" ":" "(" lengthX = INT "," lengthY = INT ")" ";"//INT supported
+	"length" ":" size = FTSize ";"
+//	position = FTPosition//INT supported
+	"extremities" ":" "[" startZone = [FTZone] "," endZone = [FTZone] "]" ";"
+	("Real" "Coordinates" ":" "[" coordinates = FTRealCoordinates "]")?
+	"}"
+;
+
+//FTPosition:
+//	"LL" ":" "(" LLx = INT "," LLy = INT ")" ";"
+//;//INT supported
+
+
+FTRealCoordinates:
+	"Position" ":" "(" posX = INT "," posY = INT ")" ";"
+	"Size" ":" "(" sizeX = INT "," sizeY = INT ")" ";"
+;
+
+FTDistance:
+	"is" distance = FTDistanceValue "object" toObject = [FTObjectWithDistance]
+;
+
+//////////
+//Dynamic Portion
+//////////
+
+FTTrajectory:
+	"Trajectory" "=" "{"
+	"player" ":" player = [FTPlayer] ";"
+	"states" ":" "{"( states += FTState)* "}"
+	"}"	
+;
+
+FTState:
+	"State" "=" "["
+	"name" ":" name = ID ";"	
+	"position" ":" "(" posX = INT "," posY = INT ")" ";"
+	( observations += FTObservation )*
+	( "nextState" ":" nextState = [FTState] ";")?
+	"]"
+;
+
+////OPTION 1;
+//FTObservation:
+//	({FTDistanceObs} "distanceIs" ":" | 
+//	{FTHangingObs} "hangingFrom" ":" |
+//	{FTPickUpObs} "pickedUp" ":" | 
+//	{FTZoneObs} "inZone" ":" distance = FTDistanceValue ) object = [FTStaticObject] ";"
+//;
+
+//OPTION 2
+FTObservation:
+	FTDistanceObs | FTHangingObs | FTPickUpObs | FTZoneObs
+;
+
+FTDistanceObs:
+	"distanceIs" ":" distance = FTDistanceValue object = [FTObjectWithDistance] ";"
+;
+
+FTHangingObs:
+	"hangingFrom" ":" object = [FTZipline] ";"
+;
+
+FTPickUpObs:
+	"pickedUp" ":"  object = [FTObstacle] ";"
+;
+
+FTZoneObs:
+	"inZone" ":" object = [FTZone] ";"
+;

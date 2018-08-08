@@ -1,0 +1,276 @@
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;_Solution3FoundAt;_Solution4FoundAt;_Solution5FoundAt;_Solution6FoundAt;_Solution7FoundAt;_Solution8FoundAt;_Solution9FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;146;193333;3180;19477877808;285;293;299;304;313;318;323;331;336;341;169;81;19;0;19;6;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;121;214687;2744;9453483225;139;148;152;104;133;14;0;7;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;238;190057;3434;10096093217;417;426;440;263;207;23;0;9;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;4;201772;2307;6471376013;73;77;82;65;15;2;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;9;1049;1593;4561201845;51;53;55;45;6;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;3;1212;1740;3977428779;181;185;189;124;10;7;0;3;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;3;1146;2016;4981489316;678;680;683;190;7;47;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;3;1201;1669;3957120437;50;53;56;43;8;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;3;1015;1393;4291205151;65;67;69;54;8;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;4;2053;2118;7000068883;105;112;121;84;116;8;0;5;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;19;1401;2177;16268714122;209;214;219;72;19;74;0;5;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;405;2291;2881;18494210431;299;307;313;117;143;78;0;10;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;261;1981;3172;17061445251;247;255;263;115;96;57;0;9;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;17;1495;2374;18988520076;210;215;219;80;20;61;0;4;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;14;1429;2262;17491987648;146;150;153;56;17;45;0;3;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;11;1430;2052;15423869421;127;130;133;53;9;41;0;3;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;766;2457;3017;46779;0;170;8;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;249;2323;2712;62715;0;144;9;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;6;2211;2617;7293929653;91;97;100;75;130;6;0;4;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;16;1636;2342;4761359764;468;472;477;302;16;20;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;2;1401;1689;5032407191;83;86;88;67;8;2;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;4;1354;1902;4359847716;108;111;113;85;8;3;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;2;1191;1653;4564064115;87;89;123;89;5;3;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;14;1252;1842;6683;0;13;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1028;1511;5019918686;52;55;58;44;6;2;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;23;1431;1960;3084;0;14;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;269;2348;3011;9722949927;136;152;159;98;121;10;0;10;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;221;2293;3059;8760107520;288;296;304;129;124;12;0;8;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;207;2418;3951;7064957289;1042;1049;1053;659;139;34;0;5;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;34;1710;66878;8739;39328;16;1727;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;12;1793;1905;7018138507;81;83;85;58;12;2;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;9;1776;1876;5634220579;57;59;61;45;9;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;402;3837;389307;8351347267;21193;385304;385355;234041;194;10342;107;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;260;1998;38763;55004;21892;108;1190;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;16;1569;46540;6169;27491;16;1043;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;10;1464;1630;6990076640;44;48;51;36;11;1;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;244;2146;2312;4060380639;7;0;123;3;0;1;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1480;1934;4430405144;317;320;323;195;16;16;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;3;1285;1789;4636732262;52;55;57;45;13;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1186;1670;4139468846;45;47;49;39;11;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;8;1092;1584;3741773672;11;12;14;9;10;0;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1179;1550;3744204648;10;12;14;9;9;0;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;345;2242;3362;5724793850;49;853;857;27;133;5;0;6;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;13;1393;1803;3947179599;28;31;34;25;22;0;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;12;1239;1758;3882877733;27;31;37;23;10;1;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;13;1243;2071;3786715633;456;459;463;290;13;9;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1112;451906;6683;275843;11;10836;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;53;4691;8381;27543742408;669;685;699;294;319;150;0;22;9;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;23;2288;3718;8220008749;124;130;139;110;27;2;0;8;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;16;1813;3519;6256514517;85;92;98;76;13;2;0;6;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1812;2663;4459852908;85;88;93;74;15;2;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;12;2366;2630;5614299322;77;81;84;66;18;2;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;13;1481;2616;4745875334;168;170;171;63;7;2;0;1;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;10;1394;2471;5872433634;60;62;64;50;12;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;28;2424;3471;87390;0;95;5;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;11;3373;2741;9076063495;168;175;179;129;21;5;0;7;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;10;1436;2320;4798399637;68;71;74;57;12;1;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1380;2099;6169;52;11;1;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1500;2266;4444997170;72;75;78;48;8;1;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1326;3307;4328378166;67;70;72;48;9;1;0;3;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;33;3459;4227;11775682423;225;234;265;157;181;11;0;11;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;1021;5973;6768;142908;237;450;16;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;33;4026;5399;14183530740;253;261;266;180;38;6;0;7;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;18;2235;2929;5519727715;83;87;90;67;18;2;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;10;1985;2603;9253;83;17;2;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;13;1950;2433;7196;61;13;1;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;11;1620;2186;7197;40;8;1;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1589;2257;6168;48;8;1;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;527;4238;5673;8332550767;506;521;619;407;209;22;0;11;3;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;22;2901;6553;5959487670;2366;2370;2418;1372;24;89;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;18;2560;35670;6131892670;31971;31974;31977;19072;14;936;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;13;1996;3329;5691937374;329;333;338;272;13;5;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;14;3575;4809;7282692364;277;280;283;189;16;4;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;11;1735;3591;6683;392;8;7;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;9;1639;3254;6184345520;180;183;186;130;10;2;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;10;1791;3042;5604534292;140;143;145;105;8;2;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;979;7744;9020;14612702660;542;560;590;315;440;36;0;22;3;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;46;5573;7249;8739;407;66;10;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;34;3981;5087;6683;277;43;7;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;20;3067;6698;11992084548;349;362;370;232;28;9;0;13;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1690;69108;7197;46946;19;1762;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;8;1478;2702;4688233077;136;140;145;96;12;2;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;14;1418;5399;5128157531;2531;2587;2795;1635;8;54;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1831;2662;4299759575;154;157;160;100;13;2;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;12;2808;5493;53462;1624;15;179;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;10;2347;4010;4112;872;8;27;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;11;1862;3490;9049919062;134;541;658;425;16;9;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;18;1944;3786;7137800216;191;196;953;671;19;18;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;16;1486;2982;4731446778;393;445;449;283;17;7;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;6;1767;3857;6198430172;600;719;1010;705;17;13;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1463;3066;4837293201;58;60;578;371;12;9;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;8;1643;2818;4738655916;80;82;86;50;10;1;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;6;1608;3678;5654;887;10;23;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;7;1511;3462;3085;854;17;22;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;11;1351;3880;3085;856;6;22;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;7;1390;3434;5141;851;10;21;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1497;4253;3598;994;11;21;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;2;1477;2335;3480999677;25;30;33;12;5;0;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;6;1413;3336;4703871724;67;69;71;42;7;0;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1264;2625;5032851336;130;132;136;102;10;4;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1382;2520;4542910663;11;13;15;1;9;0;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;6;1306;2493;4257622310;130;132;134;93;10;1;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;5;1390;2521;5115194552;241;243;245;148;10;3;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;513;4620;6046;10324582881;282;295;304;150;173;11;0;10;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;22;2470;3808;5921777466;405;409;415;243;30;7;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;1693;14981;8225;7151;7;249;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;11;1687;19601;6902669448;16054;16058;16883;10727;9;324;0;5;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;8;1637;3234;6627242767;416;421;434;203;6;6;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;12;1779;4946;5897613181;1793;2144;2152;1350;7;38;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;921;4081;6180;9180569771;401;414;426;238;143;18;0;14;3;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;32;3447;6100;6168781412;1781;1876;1880;1091;32;50;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;697;4547;5923;10694455225;257;270;284;140;256;11;0;13;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;27;3374;5231;6390295321;673;983;1087;645;32;22;0;8;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;23;2258;3699;7517487453;309;322;326;166;139;11;0;6;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;13;1631;3228;4320723854;618;622;625;464;15;14;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;11;1590;3397;4583295507;225;230;287;183;12;5;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;13;1608;10745;4626;5234;9;144;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;8;1318;4636;4227095027;267;278;2217;1447;7;33;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1331;3273;4283544671;270;581;836;584;6;12;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1307;2711;4144172468;337;339;341;232;9;3;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1377;2492;4265506920;237;239;242;175;6;2;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1325;2757;4473673334;500;503;505;379;6;9;0;2;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1520;8581;4928711583;4838;4993;4998;3667;5;109;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;6;1429;5940;4643888966;724;2976;3110;2217;6;67;0;3;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;_Solution3FoundAt;_Solution4FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;1581;6328;7275205121;705;949;2523;2697;3041;2054;6;163;0;6;0;1.0
+1;2;ModelResultImpl;7;1388;5507;6862222403;2421;2469;2473;3280;3286;2311;0;59;0;4;0;1.0
+1;3;ModelResultImpl;7;1337;7097;7600146300;1265;3125;3226;3896;4871;3591;0;123;0;4;0;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;_Solution3FoundAt;_Solution4FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;375;3112;5667;13984376775;665;737;770;877;884;612;286;25;0;15;3;1.0
+1;2;ModelResultImpl;375;2951;5128;9917087723;348;439;443;1489;1492;1037;0;28;0;8;1;1.0
+1;3;ModelResultImpl;375;3487;4857;10445304576;750;754;758;783;787;684;2;8;0;8;1;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;460;3289;4607;166040;0;223;8;0;0;0;NaN
+1;2;InconsistencyResultImpl;460;2389;4165;6169;0;1;1;0;0;0;NaN
+1;3;InconsistencyResultImpl;460;2529;3973;4112;0;1;1;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;9;3059;3425;5140;0;14;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;7;1459;2576;6683;0;9;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;3;1349;2342;4113;0;16;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;3;1181;2237;3598;0;7;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;3;1125;2141;17478;0;7;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;225;4289;3364;63229;0;211;2;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;6;1501;2331;6168;0;13;0;0;0;0;NaN
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;InconsistencyResultImpl;153;3629;3557;54490;0;207;5;0;0;0;NaN

@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ca.mcgill.ecse.fairtracks
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: ca.mcgill.ecse.fairtracks; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common,
+ org.eclipse.core.runtime;bundle-version="3.13.0",
+ org.eclipse.viatra.query.runtime;bundle-version="2.0.0",
+ org.eclipse.viatra.query.runtime.base.itc;bundle-version="2.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: ca.mcgill.ecse.fairtracks.fairtracksDsl.impl,
+ ca.mcgill.ecse.fairtracks.services,
+ ca.mcgill.ecse.fairtracks.parser.antlr.internal,
+ ca.mcgill.ecse.fairtracks.generator,
+ ca.mcgill.ecse.fairtracks.fairtracksDsl.util,
+ ca.mcgill.ecse.fairtracks.validation,
+ ca.mcgill.ecse.fairtracks.serializer,
+ ca.mcgill.ecse.fairtracks.fairtracksDsl,
+ ca.mcgill.ecse.fairtracks.scoping,
+ ca.mcgill.ecse.fairtracks,
+ ca.mcgill.ecse.fairtracks.parser.antlr
+Import-Package: org.apache.log4j

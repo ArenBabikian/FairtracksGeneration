@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.mcgill.ecse.fairtracks.standalone/src" modelPluginID="ca.mcgill.ecse.fairtracks.standalone"
+    modelName="FairtracksDsl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>FairtracksDsl.ecore</foreignModel>
+  <genPackages prefix="FairtracksDsl" disposableProviderFactory="true" ecorePackage="FairtracksDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FairtracksDsl.ecore#//FTPickUpColor">
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTPickUpColor/Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTPickUpColor/Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTPickUpColor/Yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTPickUpColor/White"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTPickUpColor/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FairtracksDsl.ecore#//FTRole">
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTRole/Attack"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTRole/Defense"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FairtracksDsl.ecore#//FTZoneType">
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Background"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Passage"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Ball"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTZoneType/Search"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FairtracksDsl.ecore#//FTDistanceValue">
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTDistanceValue/VeryFarFrom"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTDistanceValue/FarFrom"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTDistanceValue/CloseTo"/>
+      <genEnumLiterals ecoreEnumLiteral="FairtracksDsl.ecore#//FTDistanceValue/DangerouslyCloseTo"/>
+    </genEnums>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//Fairtracksmodel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//Fairtracksmodel/boardLowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//Fairtracksmodel/boardUpperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//Fairtracksmodel/distanceFromCorner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//Fairtracksmodel/staticObjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//Fairtracksmodel/objectDistances"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="FairtracksDsl.ecore#//FTStaticObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTStaticObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTStaticObject/lengthX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTStaticObject/lengthY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTStaticObject/position"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTPlayer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTPlayer/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTPlayer/canPickUpObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTPlayer/pickUpColor"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTPickUpColorClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTPickUpColorClass/color"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTZone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTZone/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTZone/contains"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTZone/partiallyOverlaps"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTZone/isAdjacentTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTZone/disallowedPlayers"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTObstacle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTObstacle/isMoveable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTObstacle/color"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTObstacle/disallowedZones"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTObstacle/initDisZones"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTZipline"/>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTPosition/LLx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTPosition/LLy"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTDistance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTDistance/fromObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTDistance/distance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTDistance/toObject"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTTrajectory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTTrajectory/player"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTTrajectory/states"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTState/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTState/posX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTState/posY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTState/observations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTState/nextState"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTObservation"/>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTDistanceObs">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTDistanceObs/object"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTHangingObs">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTHangingObs/object"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTPickUpObs">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTPickUpObs/object"/>
+    </genClasses>
+    <genClasses ecoreClass="FairtracksDsl.ecore#//FTZoneObs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FairtracksDsl.ecore#//FTZoneObs/distance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FairtracksDsl.ecore#//FTZoneObs/object"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

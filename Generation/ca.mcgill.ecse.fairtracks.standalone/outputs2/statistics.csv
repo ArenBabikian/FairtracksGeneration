@@ -1,0 +1,4 @@
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;_Solution3FoundAt;_Solution4FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;191;3841;5791;12524308967;134;177;209;255;286;183;188;13;0;13;2;1.0
+Task;Run;Result;Domain to logic transformation time;Logic to solver transformation time;Solver time;Postprocessing time;_Solution0FoundAt;_Solution1FoundAt;_Solution2FoundAt;TransformationExecutionTime;TypeAnalysisTime;StateCoderTime;StateCoderFailCount;SolutionCopyTime;SolutionDiversityCheckTime;SolutionDiversitySuccessRate
+1;1;ModelResultImpl;7;2415;3832;8105465398;128;138;145;93;117;8;0;7;2;1.0

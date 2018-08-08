@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension-point id="ca.mcgill.ecse.fairtracks.queries" name="queries" schema="schema/ca.mcgill.ecse.fairtracks.queries.exsd"/>
+  <extension id="ca.mcgill.ecse.fairtracks.queries.FairtracksQueries" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:ca.mcgill.ecse.fairtracks.queries.FairtracksQueries" id="ca.mcgill.ecse.fairtracks.queries.FairtracksQueries">
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countStaticObject"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countRealCoordinates"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countObjectWithDistance"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countPlayer"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countZone"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countObstacle"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.countZipline"/>
+      <query-specification fqn="ca.mcgill.ecse.fairtracks.queries.PlayerDistinctRole"/>
+    </group>
+  </extension>
+</plugin>

@@ -1,0 +1,35 @@
+import epackage "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+//"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/inputs/FairtracksDsl.ecore"
+	
+	
+import viatra "platform:/resource/ca.mcgill.ecse.fairtracks.queries/src/ca/mcgill/ecse/fairtracks/queries/fairtracksQueries.vql"
+
+//"platform:/resource/hu.bme.mit.fairtracks.standalone/inputs/queries.vql"
+//"/hu.bme.mit.fairtracks.queries/src/hu/bme/mit/fairtracks/queries/queries.vql"
+//"hu.bme.mit.fairtracks.queries"
+//"hu.bme.mit.fairtracks.queries"	`
+
+
+generate {
+	metamodel = { package fairtracksDsl }
+//	constraints = { package ca.mcgill.ecse.fairtracks.queries }
+//	partial-model = { "platform:/resource/ca.mcgill.ecse.faitracks.sampleInstances/initInstance.ft"}
+	//{ "platform:/resource/ca.mcgill.ecse.fairtracks.standalone/inputs/initInstance.xmi"}
+	solver = ViatraSolver
+	scope = {
+		#node = 4
+	}
+	
+	config = {
+		runtime = 10000,
+		log-level = normal
+	}
+	
+	number = 3
+	runs = 1
+	
+	debug =			"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/outputs/debug"
+	log =			"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/outputs/log.txt"
+	output =		"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/outputs/models"
+	statistics =	"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/outputs/statistics.csv"
+}

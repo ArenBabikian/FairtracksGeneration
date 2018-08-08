@@ -1,0 +1,11 @@
+Player = {
+	name : Hrag;
+	size : Point;
+	role : Attack;
+}
+
+Player = {
+	name : Aren;
+	size : Point;
+	role : Attack;
+}

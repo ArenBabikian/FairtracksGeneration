@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fairtracksDsl" nsURI="http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+    nsPrefix="fairtracksDsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Fairtracksmodel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staticObjects" upperBound="-1"
+        eType="#//FTStaticObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initialDistances" upperBound="-1"
+        eType="#//FTDistance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FTPickUpColor">
+    <eLiterals name="Red" literal="Red"/>
+    <eLiterals name="Blue" value="1" literal="Blue"/>
+    <eLiterals name="Yellow" value="2" literal="Yellow"/>
+    <eLiterals name="White" value="3" literal="White"/>
+    <eLiterals name="Other" value="4" literal="Other"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FTRole">
+    <eLiterals name="Attack" literal="Attack"/>
+    <eLiterals name="Defense" value="1" literal="Defense"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FTZoneType">
+    <eLiterals name="Background" literal="Background"/>
+    <eLiterals name="Green" value="1" literal="Green"/>
+    <eLiterals name="Red" value="2" literal="Red"/>
+    <eLiterals name="Passage" value="3" literal="Passage"/>
+    <eLiterals name="Ball" value="4" literal="Ball"/>
+    <eLiterals name="Search" value="5" literal="Search"/>
+    <eLiterals name="Start" value="6" literal="Start"/>
+    <eLiterals name="Zipline" value="7" literal="Zipline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FTDistanceValue">
+    <eLiterals name="VeryFarFrom" literal="VeryFarFrom"/>
+    <eLiterals name="FarFrom" value="1" literal="FarFrom"/>
+    <eLiterals name="CloseTo" value="2" literal="CloseTo"/>
+    <eLiterals name="DangerouslyCloseTo" value="3" literal="DangerouslyCloseTo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FTSize">
+    <eLiterals name="Point" literal="Point"/>
+    <eLiterals name="Small" value="1" literal="Small"/>
+    <eLiterals name="Medium" value="2" literal="Medium"/>
+    <eLiterals name="Big" value="3" literal="Big"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTStaticObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//FTSize"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coordinates" eType="#//FTRealCoordinates"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTObjectWithDistance" eSuperTypes="#//FTStaticObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distanceClass" upperBound="-1"
+        eType="#//FTDistance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTPlayer" eSuperTypes="#//FTObjectWithDistance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="#//FTRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initiallyInside" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canPickUpObject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pickUpColor" upperBound="-1"
+        eType="#//FTPickUpColorClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTPickUpColorClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//FTPickUpColor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTZone" eSuperTypes="#//FTObjectWithDistance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//FTZoneType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" unique="false"
+        upperBound="-1" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partiallyOverlaps" unique="false"
+        upperBound="-1" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isAdjacentTo" unique="false"
+        upperBound="-1" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disallowedPlayers" unique="false"
+        upperBound="-1" eType="#//FTPlayer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTObstacle" eSuperTypes="#//FTObjectWithDistance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMoveable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//FTPickUpColor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initiallyInside" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disallowedZones" unique="false"
+        upperBound="-1" eType="#//FTZone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTZipline" eSuperTypes="#//FTStaticObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startZone" eType="#//FTZone"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endZone" eType="#//FTZone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTRealCoordinates">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTDistance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="#//FTDistanceValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toObject" eType="#//FTObjectWithDistance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTTrajectory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="#//FTPlayer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//FTState" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="observations" upperBound="-1"
+        eType="#//FTObservation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextState" eType="#//FTState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTObservation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FTDistanceObs" eSuperTypes="#//FTObservation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="#//FTDistanceValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//FTObjectWithDistance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTHangingObs" eSuperTypes="#//FTObservation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//FTZipline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTPickUpObs" eSuperTypes="#//FTObservation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//FTObstacle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FTZoneObs" eSuperTypes="#//FTObservation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//FTZone"/>
+  </eClassifiers>
+</ecore:EPackage>

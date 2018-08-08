@@ -1,0 +1,165 @@
+////boardLowerBound : 0 ;
+////boardUpperBound : 12;
+////minDistanceFromCorneForBlock : 2 ;
+//
+////Players
+//
+  Player = {
+name : redPlayer;
+size: Small;
+role: Defense;
+//inside : z1parent;
+//distance : is VeryFarFrom object z2;
+}
+//
+//Player = {
+//name : GreenPlayer;
+//size: Point;
+//role: Attack;
+//inside : z1parent;
+//distance : is DangerouslyCloseTo object z2;
+//}
+///*
+//Player = {
+//name : greenPlayer2;
+//size: (0, 0);
+//LL:(12, 12);
+//role: Attack;
+//canPickUp;
+//pickUpColor : White;
+//}
+//*/
+////Zones
+//
+//Zone = {
+//	name : greenZone;
+//	size: Big;
+//	zoneType : Green;
+//	//contains: greenZone, z2;
+//	partiallyOverlaps : greenZone;
+//}
+//
+//Zone = {
+//	name : z2parent;
+//	size:  Big;
+//	zoneType : Red;
+//	contains : z2;
+//	//partiallyOverlaps : z1parent;
+////	isAdjacentTo : z1granparent;
+//	disallowedPlayers : redPlayer;
+//}
+//
+//
+//
+//Zone = {
+//	name : z1;
+//	size: Point;
+//	zoneType : Zipline;
+//	//contains : z2;
+//	//isAdjacentTo : z2;
+//	partiallyOverlaps : z2;
+//	disallowedPlayers : redPlayer;
+////	distance : is DangerouslyCloseTo object z2;
+////	distance : is CloseTo object z3;
+//	}
+//	
+//Zone = {
+//	name : z2;
+//	size: Point;
+//	zoneType : Zipline;
+//	//partiallyOverlaps : z1;
+//	//contains : z1;
+//	//isAdjacentTo : z1;
+//	disallowedPlayers : redPlayer;
+//	distance : is DangerouslyCloseTo object z1;
+////	distance : is DangerouslyCloseTo object z3;
+//}
+//	
+//Zone = {
+//	name : z3;
+//	size: Point;
+//	zoneType : Zipline;
+//	//contains : z2;
+//	//isAdjacentTo : z2;
+//	partiallyOverlaps : z2;
+//	disallowedPlayers : redPlayer;
+//	distance : is CloseTo object z1;
+//	distance : is DangerouslyCloseTo object z2;
+//	}
+//
+//
+//
+//Zone = {
+//	name : z1granparent;
+//	size: Big;
+//	zoneType : Red;
+//	contains: z1parent, z1;
+//	//partiallyOverlaps : z2parent;
+////	isAdjacentTo: z2parent;
+//	disallowedPlayers : redPlayer;
+//}
+//
+//Zone = {
+//	name : z1parent;
+//	size: Small;
+//	zoneType : Search;
+//	contains : z1, z2;
+//	isAdjacentTo : z2;
+//	disallowedPlayers : redPlayer;
+//	//distance : is VeryFarFrom object z2;
+//}
+//
+//
+//
+//
+//
+//Zipline = {
+//	name : zl1;
+//	length : Big;
+//	extremities : [z1granparent, z1];
+//}
+//
+///*
+//Zone = {
+//	name : tunnel;
+//	size: (1, 2);
+//	LL: (3, 5);
+//	zoneType : Passage;
+//}
+//
+//Zone = {
+//	name : bridge;
+//	size: (1, 2);
+//	LL: (7, 5);
+//	zoneType : Passage;
+//}
+//*/
+////Obstacles
+//
+//Obstacle = {
+//	name : greenFlag;
+//	size: Big;
+//	isMoveable;	
+//	color: White;
+////	inside: redTargetZone;
+//	disallowedZones: z1;
+//	distance : is CloseTo object z1;
+//	}
+///*
+//Obstacle = {
+//	name : redFlag;
+//	size: Point;
+//	isMoveable;
+//	color: White;
+//	//initiallyDisallowedZones: tunnel, bridge, greenZone, greenTargetZone;
+//}
+//
+//Obstacle = {
+//	name : randomBlock;
+//	size: (2, 2);
+//	color: Other;	
+//}
+//
+//* 
+//* */
+//
