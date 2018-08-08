@@ -3,6 +3,7 @@ grammar ca.mcgill.ecse.fairtracks.FairtracksDsl with org.eclipse.xtext.common.Te
 generate fairtracksDsl "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
 
 Fairtracksmodel:
+	//Test Comment Aren
 //	"boardLowerBound" ":" boardLowerBound = INT ";"//INT supported
 //	"boardUpperBound" ":" boardUpperBound = INT ";"//INT supported
 //	"minDistanceFromCorneForBlock" ":" distanceFromCorner = INT ";"//INT supported
