@@ -1,5 +1,5 @@
-import epackage "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
-//"platform:/resource/ca.mcgill.ecse.fairtracks.standalone/inputs/FairtracksDsl.ecore"
+//import epackage "http://www.mcgill.ca/ecse/fairtracks/FairtracksDsl"
+import epackage "platform:/resource/ca.mcgill.ecse.fairtracks.standalone/inputs/FairtracksDsl.ecore"
 	
 	
 import viatra "platform:/resource/ca.mcgill.ecse.fairtracks.queries/src/ca/mcgill/ecse/fairtracks/queries/fairtracksQueries.vql"

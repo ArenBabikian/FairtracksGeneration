@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<partialinterpretation:PartialInterpretation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:partialinterpretation="http://www.bme.hu/mit/inf/dslreasoner/viatrasolver/partialinterpretationlanguage" minNewElements="4" maxNewElements="4">
+  <problem href="generation.logicproblem#/"/>
+  <newElements xsi:type="partialinterpretation:BooleanElement" name="true" valueSet="true" value="true"/>
+  <newElements xsi:type="partialinterpretation:BooleanElement" name="false" valueSet="true"/>
+  <partialtypeinterpratation xsi:type="partialinterpretation:PartialBooleanInterpretation" elements="//@newElements.0 //@newElements.1"/>
+  <partialtypeinterpratation xsi:type="partialinterpretation:PartialIntegerInterpretation" elements="//@openWorldElements.0"/>
+  <partialtypeinterpratation xsi:type="partialinterpretation:PartialRealInterpretation" elements="//@openWorldElements.1"/>
+  <partialtypeinterpratation xsi:type="partialinterpretation:PartialStringInterpretation" elements="//@openWorldElements.2"/>
+  <openWorldElements xsi:type="partialinterpretation:IntegerElement" name="New Integers"/>
+  <openWorldElements xsi:type="partialinterpretation:RealElement" name="New Reals"/>
+  <openWorldElements xsi:type="partialinterpretation:StringElement" name="New Strings"/>
+  <openWorldElements name="New Objects"/>
+</partialinterpretation:PartialInterpretation>
